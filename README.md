@@ -1,38 +1,48 @@
-# ROS2 Autonomous Drone Navigation
+# ROS2 Autonomous Drone Navigation (Work in Progress)
 
-This project demonstrates an autonomous drone navigation system built using **ROS2, PX4 SITL, and Gazebo Sim**. The system is designed to operate in **GPS-denied environments**, where the drone relies on onboard perception, mapping, and path planning to navigate through complex environments such as mazes.
+This repository documents the development of an **autonomous drone navigation system using ROS2, PX4 SITL, and Gazebo Sim**. The goal of this project is to build a drone capable of navigating **GPS-denied environments** using onboard perception, mapping, and path planning algorithms.
 
-The repository includes multiple modules that demonstrate the full robotics pipeline—from algorithm prototyping to drone simulation.
+----Project Status-----
+This project is currently in the **early development stage**. Initial work focuses on learning and implementing the core robotics components such as ROS2 communication, simulation environments, and algorithm prototyping.
 
-To simplify development and testing, navigation algorithms are first implemented and validated using **ROS2 Turtlesim**, which provides a lightweight environment for testing control strategies and planning algorithms. These algorithms are then extended to a simulated drone using **PX4 SITL** and **Gazebo Sim**.
+The long-term objective is to develop a complete autonomous navigation pipeline where a drone can explore and navigate complex environments such as **mazes or indoor spaces without relying on GPS**.
 
-## Key Features
+## Project Roadmap
 
-• ROS2-based modular robotics architecture
-• Algorithm prototyping using Turtlesim
-• Autonomous drone simulation with PX4 SITL and Gazebo Sim
-• Global path planning using A* algorithm
-• Offboard drone control through ROS2 nodes
-• Modular package structure for perception, planning, and control
+The project will be developed step-by-step through the following stages:
 
-## System Architecture
+1. **ROS2 Fundamentals**
 
-Algorithm Prototyping (Turtlesim)
-↓
-Path Planning and Control Algorithms
-↓
-Gazebo Simulation Environment
-↓
-PX4 Offboard Control
-↓
-Autonomous Drone Navigation
+   * Implement basic ROS2 nodes and communication
+   * Test control algorithms using **ROS2 Turtlesim**
 
-## Technologies Used
+2. **Algorithm Prototyping**
 
-* ROS2
-* PX4 Autopilot
-* Gazebo Sim
-* Path planning algorithms (A*)
-* Drone offboard control
+   * Implement path planning algorithms (A*, Dijkstra, etc.)
+   * Test navigation behaviors in simple simulated environments
 
-This project aims to demonstrate how modern robotics frameworks can be used to develop autonomous aerial systems capable of navigating complex environments without relying on GPS.
+3. **Drone Simulation**
+
+   * Integrate **PX4 SITL** with **Gazebo Sim**
+   * Simulate drone sensors such as LiDAR and depth cameras
+
+4. **Autonomous Navigation**
+
+   * Implement global and local path planning
+   * Enable autonomous navigation in maze-like environments
+
+5. **GPS-Denied Navigation**
+
+   * Integrate mapping and localization
+   * Enable fully autonomous drone navigation indoors
+
+## Key Technologies
+
+* **ROS2** – Robotics middleware and communication
+* **PX4 Autopilot** – Drone flight control software
+* **Gazebo Sim** – Robotics simulation environment
+* **Python / C++** – Algorithm and control implementation
+
+## Vision
+
+The final goal of this project is to create a **fully autonomous drone system capable of navigating complex environments without GPS**, demonstrating the integration of perception, planning, and control within the ROS2 ecosystem.
